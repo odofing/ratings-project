@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Ratings</title>
+   
+</head>
+<body>
+
+    <header class="bg-dark text-light text-center py-3">Web Development Ratings</header>
+    <section class="container mt-10">
+       
+       <div class="form-group">
+           <select id="application-select" class="form-control custom-select">
+            <option value="0" disabled selected>Select Application</option>
+            <option value="office">Microsoft Office</option>
+            <option value="html">HTML and CSS (with sass)</option>
+            <option value="bootstrap">Bootstrap</option>
+            <option value="javascript">Javascript</option>
+            <option value="react">React</option>
+           </select>
+       </div>
+       <div class="form-group">
+           <input type="number" id="rating-control" class="form-control" step="0.1" min="0" max="5" placeholder="Rate Between 1-5" disabled>
+       </div>
+
+       <table class="table table-hover">
+           <thead>
+               <tr>
+                   <th>Application</th>
+                   <th>Ratings</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr class="office">
+                   <td>Microsoft Office</td>
+                   <td>
+                     
+                       <div class="stars-outer">
+                           <div class="stars-inner"></div>
+                       </div>
+                   
+                       <span class="number-rating"></span>
+                   </td>
+               </tr>
+           </tbody>
+           <tbody>
+            <tr class="html">
+                <td>HTML and CSS (with sass)</td>
+                <td>
+                    <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"></span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="bootstrap">
+                <td>Bootstrap</td>
+                <td>
+                    <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"></span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="javascript">
+                <td>Javascript</td>
+                <td>
+                    <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"></span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="react">
+                <td>React</td>
+                <td>
+                    <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"></span>
+                </td>
+            </tr>
+        </tbody>
+       </table>
+
+</section>
+
+   <footer class="text-center bg-dark text-white p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Copyright &copy; <span id="year"></span> <a href="https://twitter.com/g_odofin">OdofinG</a></p> 
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Get the current year for the copyright
+  $('#year').text(new Date().getFullYear());
+
+</script>
+
+    <script src="app.js"></script>
+</body>
+</html>
